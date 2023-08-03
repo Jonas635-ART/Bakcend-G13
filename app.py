@@ -27,7 +27,7 @@ configuracionSwagger = get_swaggerui_blueprint(SWAGGER_URL, API_URL,config={
 # agregar otra aplicacion que no sea Flask a nuestro proyecto de Flask
 app.register_blueprint(configuracionSwagger)
 #guarda las variables del proyecto de flask
-app.config['SQLALCHMEY_DATABASE_URI'] = environ.get('DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URI')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:%s@localhost:5432/directorio' % quote_plus('root')
 #Inicia app flask sqla
 #dentro de la app de flask tenemos nuestra conexion a la bd
