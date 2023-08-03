@@ -9,6 +9,7 @@ class UsuarioModel(conexion.Model):
     correo = Column(type_=types.Text, unique=True, nullable=False)
     telefono = Column(type_=types.Text, nullable=True)
     linkedinUrl = Column(name='linkedin_url', type_=types.Text)
+    direccion = Column(type_=types.Text, nullable=False)
 
     #indica el nombre de la tabla en la bd, si no se le proporciona usara el nombre de la bd
     __tablename__ = 'usuarios'
