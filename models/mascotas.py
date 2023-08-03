@@ -9,7 +9,7 @@ class tipomascota(Enum):
 
 class SexoMascota(Enum):
     MACHO = 'MACHO'
-    HERMBRA = 'HEMBRA'
+    HEMBRA = 'HEMBRA'
 
 
 class MascotaModel(conexion.Model):

@@ -6,9 +6,13 @@ from urllib.parse import quote_plus
 from flask_migrate import Migrate
 from flask_restful import Api
 from controllers.usuarios import UsuarioController, UsuariosController
+from controllers.mascotas import MascotasController
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
 from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 api = Api(app)
@@ -46,6 +50,8 @@ Migrate(app=app, db=conexion)
 
 api.add_resource(UsuariosController, '/usuarios')
 api.add_resource(UsuarioController, '/usuario/<int:id>')
+api.add_resource(MascotasController, '/mascotas')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
