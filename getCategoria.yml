@@ -1,0 +1,29 @@
+tags:
+  - Categoria
+operationId: getCategoria
+description: Lista todas las categorias
+summary: Devolver la categorias
+responses:
+  200:
+    descriptcion: Las Catgeorias
+    schema:
+      properties:
+        content:
+          type: array
+          items:
+          $ref: '#/definitions/Categoria'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
