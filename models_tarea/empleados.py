@@ -8,8 +8,8 @@ class EmpleadoModel(conexion.Model):
     apellido = Column(type_=types.Text, nullable=False)
     email = Column(type_=types.Text, nullable=False, unique=True)
 
-    area_id = Column(ForeignKey(column='Tipo_areas.id'), nullable=False, name='Tipo_area.id')
-    
+    areaid = Column(ForeignKey(column='areas.id'), nullable=False, name='area.id')
+
     __tablename__ = 'empleados'
 
 
