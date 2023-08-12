@@ -32,6 +32,43 @@
                     "example": "https://google.com"
                 }
             }
+        },
+        "Usuario": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": "1"
+                },
+                "nombre": {
+                    "type": "string",
+                    "example": "lorem Ipsum"
+                },
+                "correo": {
+                    "type": "string",
+                    "example": "joseiu@correo.com"
+                },
+                "tipoUsuario": {
+                    "type": "string",
+                    "example": "ADMIN"
+                },
+                "fec_nacimiento": {
+                    "type": "integer",
+                    "example": "2020-02-08T23:59:58"
+                }
+                
+            }
+        }
+    },
+    "components": {
+        "securityDefinitions": {
+            "Bearer": {
+                "type": "apiKey",
+                "name": "authorization",
+                "in": "header",
+                "example": "Por favor, utilizar el siguiente formato: Bearer <YOUR_TOKEN>"
+                
+            }
         }
     }
 }

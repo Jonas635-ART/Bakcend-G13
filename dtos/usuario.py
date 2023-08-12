@@ -7,19 +7,21 @@ class UsuarioRequestDTO(SQLAlchemyAutoSchema):
     #correo = auto_field()
     correo = fields.Email(required=True)
     class Meta:
-        model: UsuarioModel
+        model = UsuarioModel
 class UsuarioResponseDTO(SQLAlchemyAutoSchema):
     TipoUsuario = EnumField(TipoUsuario)
     password = auto_field(load_only=True)
 
     class Meta:
-        model: UsuarioModel
+        model = UsuarioModel
 
 class LoginRequestDTO(Schema):
     correo = fields.Email(required=True)
     password = fields.Str(required=True)
 
-
+class CambiasPasswordRequestDTO(Schema):
+    password = fields.String(required=True)
+    newPassword = fields.String(required=True)
 
 
 
