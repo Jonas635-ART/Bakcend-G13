@@ -5,7 +5,7 @@ description: Lista todas las categorias
 summary: Devolver la categorias
 responses:
   200:
-    descriptcion: Las Catgeorias
+    descriptcion: Las Categorias
     schema:
       properties:
         content:

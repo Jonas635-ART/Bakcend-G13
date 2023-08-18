@@ -4,6 +4,7 @@ from flask_restful import Resource, request
 from dtos import UsuarioRequestDTO, UsuarioResponseDTO, LoginRequestDTO, CambiasPasswordRequestDTO
 from bcrypt import gensalt, hashpw, checkpw
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
+from mensajeria import cambiarPassword
 
 class RegistroController(Resource):
     def post(self):
@@ -98,6 +99,7 @@ class CambiarcontrasenaController(Resource):
     def post(self):
         data = request.get_json()
         dto = CambiasPasswordRequestDTO()
+        identity = get_jwt_identity()
         try:
             dataValidadda = dto.load(data)
             usuarioEncontrado = conexion.session.query(UsuarioModel).filter_by(id = identity).first()

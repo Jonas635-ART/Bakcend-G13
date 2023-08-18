@@ -59,7 +59,7 @@ class CategoriasController(Resource):
 
     def get(self):
         """
-        file: getCatgeoria.yml
+        file: getCategoria.yml
         """
         categorias: conexion.session.query(CategoriaModel).all()
         dto = CategoriaRequestDto()
